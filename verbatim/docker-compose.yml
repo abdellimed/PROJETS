@@ -1,0 +1,16 @@
+version: '3'
+services: 
+    core_api:
+        build:
+           context: .
+      
+        container_name: "verbatim-api-container"
+        ports: 
+            - "7000:15400"
+        environment:
+
+              SERVER_URI_ELASTICSEARCH: ${SERVER_URI_ELASTICSEARCH}
+
+        volumes: 
+            - ./app/:/app
+            - ./models/:/models

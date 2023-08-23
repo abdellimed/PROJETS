@@ -1,0 +1,13 @@
+asyncio
+gradio
+fastapi
+uvicorn
+mangum
+numpy>=1.20.1
+shap>=0.39.0
+transformers==4.30.2
+pytorch-lightning
+gensim
+torch
+pydantic
+elasticsearch
