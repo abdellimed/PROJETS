@@ -1,0 +1,14 @@
+
+version: '3'
+services:
+  gradio_app:
+    build:
+       context: .
+
+    container_name: "agent-conversationnel"
+    ports:
+      - "3200:3200"
+    environment:
+
+      - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+      - TOKEN_OPEN_KEY=${TOKEN_OPEN_KEY}
