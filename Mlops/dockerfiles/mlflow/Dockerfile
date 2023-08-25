@@ -7,7 +7,9 @@ FROM python:3.9-slim-buster
 #RUN update-ca-certificates
 RUN apt-get update
 RUN apt-get install -y postgresql postgresql-contrib postgresql-server-dev-all python-psycopg2
-RUN pip install mlflow boto3 pymysql psycopg2-binary scikit-learn bentoml
+COPY requirements.txt requirements.txt
+RUN pip3 install -r requirements.txt
+RUN pip install boto3 pymysql psycopg2-binary scikit-learn
 #ENV  MLFLOW_S3_ENDPOINT_URL  http://s3-artifact-storage:9000/
 #CMD mlflow server --backend-store-uri postgresql://mlflow:mlflow@postgres-mlflow/mlflow --artifacts-destination s3://data -h 0.0.0.0 -p 5000
 
