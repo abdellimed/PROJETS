@@ -10,10 +10,10 @@ from langchain.memory import ConversationBufferMemory
 import lancedb
 from langchain.vectorstores import LanceDB
 from langchain import PromptTemplate
-elasticsearch_uri =os.environ.get('SERVER_URI_ELASTICSEARCH')
-token_key=os.environ.get('TOKEN_OPEN_KEY')
-def create_conversation() -> ConversationalRetrievalChain:
 
+def create_conversation() -> ConversationalRetrievalChain:
+    elasticsearch_uri =os.environ.get('SERVER_URI_ELASTICSEARCH')
+    token_key=os.environ.get('TOKEN_OPEN_KEY')
     embeddings = OpenAIEmbeddings(
         openai_api_key=token_key
     )
