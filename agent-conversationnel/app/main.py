@@ -9,6 +9,7 @@ from langchain.vectorstores import LanceDB
 from elasticsearch import Elasticsearch
 from datetime import datetime
 import pytz
+import os
 app=FastAPI()
 
 
